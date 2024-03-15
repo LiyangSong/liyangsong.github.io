@@ -1,13 +1,11 @@
 # Site settings
 title: Liyang Song
 email: song.liy@northeastern.edu
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
+  「 Hello world! My name is Liyang Song. 」# this means to ignore newlines until "baseurl:"
 header-img: assets/image/bg-home.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://liyangsong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-
-# Build settings
-theme: jekyll-theme-clean-blog
 
 # Publish posts or collection documents with a future date.
 future: true
@@ -72,10 +70,6 @@ sidebar-avatar: https://github.com/LiyangSong/liyangsong.github.io/blob/d862a373
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
