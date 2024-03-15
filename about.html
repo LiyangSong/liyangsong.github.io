@@ -1,0 +1,13 @@
+---
+layout: page
+title: "About"
+description:
+header-img: "assets/image/bg-me.jpg"
+header-mask: 0.3
+multilingual: true
+---
+
+<div class="en post-container">
+    {% capture about_en %}{% include about.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>

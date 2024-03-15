@@ -1,0 +1,27 @@
+# Jekyll
+_site
+.sass-cache
+Gemfile.lock
+*.gem
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Dependency
+node_modules
+
+# IDE
+.vscode
+.idea/
+out/
+.idea_modules/
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
