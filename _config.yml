@@ -1,8 +1,8 @@
 # Site settings
 title: Liyang Song
 email: song.liy@northeastern.edu
-description: >-
-  「 Hello world! My name is Liyang Song. 」# this means to ignore newlines until "baseurl:"
+description: >-# this means to ignore newlines until "baseurl:"
+  This is a personal blog of Liyang Song for technical writing and idea sharing.
 header-img: assets/image/bg-home.jpg
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://liyangsong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
