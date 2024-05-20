@@ -3,7 +3,6 @@ DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, 
 languageCode = "en-us"
 title = "Liyang's Blog"
 copyright = "LiyangSong 2024"
-theme = "diary"
 # googleAnalytics = "UA-123-45"
 
 [markup]
