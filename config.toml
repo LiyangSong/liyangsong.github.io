@@ -20,8 +20,9 @@ tabWidth = 4
 
 [params]
 subtitle = "家園已在身後，世界儘在眼前"
+favicon = "/favicon/favicon.ico"
 enableGitalk = false
-enableGiscus = true
+enableGiscus = false
 
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
