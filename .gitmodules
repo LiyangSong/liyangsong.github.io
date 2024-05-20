@@ -1,0 +1,3 @@
+[submodule "themes/diary"]
+	path = liyangsong.github.io/themes/diary
+	url = https://github.com/AmazingRise/hugo-theme-diary.git

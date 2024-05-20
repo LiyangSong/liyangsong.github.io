@@ -1,14 +1,12 @@
-# Jekyll
-_site
-.sass-cache
-Gemfile.lock
-*.gem
-.jekyll-cache
-.jekyll-metadata
-vendor
-
-# Dependency
-node_modules
+# Hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+hugo.exe
+hugo.darwin
+hugo.linux
+/.hugo_build.lock
 
 # IDE
 .vscode
