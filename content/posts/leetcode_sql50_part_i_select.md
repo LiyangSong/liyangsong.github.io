@@ -4,7 +4,6 @@ date: 2024-05-20T14:42:45-04:00
 description: "The analysis and answers to LeetCode SQL50 \"Select\" part questions. Both SQL and Pandas methods are used."
 tags: [LeetCode, MySQL, SQL, Pandas, Python]
 featured_image: "/images/hard_drive.jpg"
-# images is optional, but needed for showing Twitter Card
 images: []
 categories: LeetCode
 comment: true
