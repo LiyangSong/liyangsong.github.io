@@ -3,7 +3,7 @@ title: "LeetCode SQL50 Part II - Basic Joins"
 date: 2024-05-20T22:13:45-04:00
 description: "The analysis and answers to LeetCode SQL50 \"Basic Joins\" part questions. Both SQL and Pandas methods are used."
 tags: [LeetCode, MySQL, SQL, Pandas, Python]
-featured_image: "/images/hard_drive.jpg"
+featured_image: "/img/hard_drive.jpg"
 images: []
 categories: LeetCode
 comment: true
