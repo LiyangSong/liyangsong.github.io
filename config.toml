@@ -1,4 +1,4 @@
-baseURL = "http://liyangsong.github.io/"
+baseURL = "https://liyangsong.github.io/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
 title = "Liyang's Blog"
@@ -20,7 +20,7 @@ tabWidth = 4
 [params]
 subtitle = "家園已在身後，世界儘在眼前"
 favicon = "/favicon/favicon.ico"
-enableGitalk = false
+enableGitalk = true
 enableGiscus = false
 
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
