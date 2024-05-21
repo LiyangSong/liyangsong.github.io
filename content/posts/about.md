@@ -27,6 +27,7 @@ I am an INFJ, a husband, and a big fan of RPG and SLG.
 ## Reach Me
 
 - 📧 My Email: [song.liy@northeastern.edu](mailto:song.liy@northeastern.edu)
+- 🌠 My Blog: [https://liyangsong.github.io/](https://liyangsong.github.io/)
 - 😸 My GitHub: [https://github.com/LiyangSong](https://github.com/LiyangSong)
 - 💼 My LinkedIn: [https://www.linkedin.com/in/ly-song/](https://www.linkedin.com/in/ly-song/)
 
