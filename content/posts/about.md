@@ -1,20 +1,20 @@
 ---
 title: "About"
-date: 2024-05-20T14:42:45-04:00
+date: 2024-05-20T13:14:00-04:00
 description: "An INFJ's self introduction."
 tags: []
-featured_image: "/images/tower.jpeg"
+featured_image: "/img/tower.jpeg"
 images: []
 categories:
 comment: true
 draft: false
 ---
 
-# About this blog
+## About this blog
 
 This website is built with Hugo framework, styled with [Diary](https://github.com/amazingrise/hugo-theme-diary/) theme by [Rise](https://risehere.net/).
 
-# About Me
+## About Me
 
 Hi, my name is Liyang Song.
 
@@ -24,26 +24,25 @@ Most of the time I live in Portland, ME of the United States.
 
 I am an INFJ, a husband, and a big fan of RPG and SLG.
 
-
-
-# Reach Me
+## Reach Me
 
 - 📧 My Email: [song.liy@northeastern.edu](mailto:song.liy@northeastern.edu)
 - 😸 My GitHub: [https://github.com/LiyangSong](https://github.com/LiyangSong)
 - 💼 My LinkedIn: [https://www.linkedin.com/in/ly-song/](https://www.linkedin.com/in/ly-song/)
 
-# Computer Science
+## Computer Science
 
 To be done
 
-# Data Science
+## Data Science
 
 To be done
 
-# Books
+## Books
 
 **I am currently reading:**
 - *Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems*
+- *Spring Start Here: Learn what you need and learn it well*
 - *Fluent Python: Clear, Concise, and Effective Programming*, 2nd Edition
 - *Code: The Hidden Language of Computer Hardware and Software*, 2nd Edition
 
@@ -59,17 +58,17 @@ To be done
 - *How Linux Works: What Every Superuser Should Know*, 3rd Edition
 - *Effective Java*, 3rd Edition
 
-# Games
+## Games
 
 To be done
 
-# Movies
+## Movies
 
 I love fantasy, adventure, sci-fi, epic, and road movies.
 
 My favorite movie is The *Lord of the Rings* series.
 
-# Music
+## Music
 
 CPop, JPop, City Pop, OST, Light, Classical, etc.
 
