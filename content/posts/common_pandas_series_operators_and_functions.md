@@ -7,6 +7,6 @@ featured_image: "/img/red_squares.jpg"
 images: []
 categories: Data Engineering
 comment: true
-draft: true
+draft: false
 ---
 
