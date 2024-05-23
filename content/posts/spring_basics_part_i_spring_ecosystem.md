@@ -3,7 +3,7 @@ title: "Spring Basics Part I: Spring Ecosystem"
 date: 2024-05-23T16:29:45-04:00
 description: "Basic introduction to Spring and Spring ecosystem, the most widely used Java framework today."
 tags: [Spring, Java, Backend, System Design]
-featured_image: "/img/spring.png"
+featured_image: "/img/spring.jpg"
 images: []
 categories: Spring
 comment: true
