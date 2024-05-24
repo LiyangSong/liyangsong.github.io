@@ -84,7 +84,3 @@ weight = 4
 url = "/posts/links"
 name = "Links 友鏈"
 weight = 5
-[[menu.main]]
-url = "/index.xml"
-name = "RSS"
-weight = 6
