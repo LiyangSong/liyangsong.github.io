@@ -1,6 +1,7 @@
 {{ define "main" }}
 
 <div class="post-list-container post-list-container-shadow">
+
   <a class="a-block">
     <div class="post-item-wrapper post-item-wrapper-no-hover">
       <div class="post-item post-item-no-gaps">
@@ -12,16 +13,52 @@
       </div>
     </div>
   </a>
-  <div class="tags">
-    {{ range .Data.Terms }}
-    <div class="tag">
-      <a href="{{.Page.RelPermalink}}" class="btn btn-outline-secondary position-relative rounded-pill">
-        {{.Page.Title}}
-        <span class="badge">({{.Count}})</span>
-      </a>
+
+  {{ if or (eq .Title "Categories") (eq .Title "Projects") }}
+    <div class="categories-container">
+      {{ range .Data.Terms }}
+        <div class="category-wrapper">
+          <a href="{{.Page.RelPermalink}}">
+            <div class="card text-center" style="border-radius:.5rem">
+              <div class="card-header font-weight-bold">
+                {{.Page.Title}}
+              </div>
+              <div class="card-body">
+                <img src="{{ .Page.Params.image }}" alt="{{ .Page.Title }}" class="img-fluid mb-3"  style="border-radius:.5rem" >
+                <p class="card-text">
+                  {{ .Page.Params.description }}
+                </p>
+              </div>
+              {{ if eq $.Title "Projects" }}
+              <div class="card-footer d-flex justify-content-around">
+                <a href="#" class="btn btn-link">
+                  <img src="/favicon/favicon-16x16.png" alt="GitHub" class="icon">
+                  Code
+                </a>
+                <a href="#" class="btn btn-link">
+                  <img src="/favicon/favicon-16x16.png" alt="Web" class="icon">
+                  Post
+                </a>
+              </div>
+              {{ end }}
+            </div>
+          </a>
+        </div>
+      {{ end }}
     </div>
-    {{ end }}
-  </div>
+
+  {{ else }}
+    <div class="tags">
+      {{ range .Data.Terms }}
+      <div class="tag">
+        <a href="{{.Page.RelPermalink}}" class="btn btn-outline-secondary position-relative rounded-pill">
+          {{.Page.Title}}
+          <span class="badge">({{.Count}})</span>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
 
 

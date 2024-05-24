@@ -1107,3 +1107,26 @@ mjx-container {
     margin: 10px;
   }
 }
+
+.categories-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px 0 0 0;
+  flex-wrap: wrap;
+  .category-wrapper {
+    width: 20rem;
+    margin: 20px;
+    &:hover {
+      * {
+        color: $dark-accent;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+.projects {
+
+}
