@@ -12,7 +12,7 @@ draft: false
 
 ## Introduction
 
-**_Spring_** the most used Java framework today. 
+**_Spring_** is the most used Java framework today. 
 
 An application framework is a broad set of common tools and software functionalities that can be used to develop apps. However, not all the features of the framework need to be used, programmers should choose the right components depending on the requirements of the app and know how to assemble them to achieve the right result.
 
