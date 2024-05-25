@@ -221,6 +221,9 @@ body.night {
   }
 
   #single-column-footer {
+    * {
+      color: $dark-mode-text;
+    }
     color: $dark-mode-text;
   }
 
@@ -268,10 +271,30 @@ body.night {
 
   .tags {
     .tag a {
-      color: white;
+      color: $dark-mode-text;
       span {
-        color: white;
+        color: $dark-mode-text;
       }
     }
   }
+
+  .categories-container {
+    .card {
+      * {
+        color: $dark-mode-text;
+      }
+
+      background: $dark-mode-front-container-background;
+      transition: background 0.1s linear, color 0.1s linear;
+
+      &:hover {
+        * {
+          color: $deep-light-accent !important;
+        }
+        background-color: lighten($dark-mode-front-container-background, 20%);
+      }
+    }
+  }
+
+
 }
