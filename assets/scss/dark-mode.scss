@@ -291,7 +291,7 @@ body.night {
         * {
           color: $deep-light-accent !important;
         }
-        background-color: lighten($dark-mode-front-container-background, 20%);
+        background-color: lighten($dark-mode-front-container-background, 10%);
       }
     }
   }
