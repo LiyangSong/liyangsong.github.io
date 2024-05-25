@@ -1,12 +1,28 @@
+<div class="card text-center" style="border-radius:.5rem">
+    <div class="card-header font-weight-bold">
+        {{.Page.Title}}
+    </div>
+    <div class="card-body">
+        <img
+                src="{{ .Page.Params.image }}"
+                alt="{{ .Page.Title }}"
+                class="img-fluid mb-3"
+                style="border-radius:.5rem"
+        />
+        <p class="card-text">
+            {{ .Page.Params.description }}
+        </p>
+    </div>
+</div>
 
-        <div class="card text-center" style="border-radius:.5rem">
-            <div class="card-header font-weight-bold">
-                {{.Page.Title}}
-            </div>
-            <div class="card-body">
-                <img src="{{ .Page.Params.image }}" alt="{{ .Page.Title }}" class="img-fluid mb-3"  style="border-radius:.5rem" >
-                <p class="card-text">
-                    {{ .Page.Params.description }}
-                </p>
-            </div>
-        </div>
+<!-- dynamically adjust the font size if the header overflows -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var headers = document.querySelectorAll('.card-header');
+        headers.forEach(function(header) {
+            if (header.scrollWidth > header.clientWidth) {
+                header.classList.add('long-header');
+            }
+        });
+    });
+</script>

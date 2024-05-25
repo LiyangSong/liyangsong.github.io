@@ -1127,6 +1127,19 @@ mjx-container {
     border-color: $post-container-border;
     transition: background 0.1s linear, color 0.1s linear;
 
+    .card-header {
+      padding: 10px 5px 10px 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .card-header.long-header {
+      font-size: 0.85rem;
+      white-space: normal;
+    }
+
+
     &:hover {
       background-color: rgba(0, 0, 0, 0.05);
       * {
