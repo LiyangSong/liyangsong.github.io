@@ -25,7 +25,7 @@
 
   {{ else if eq .Title "Projects" }}
     <div class="categories-container">
-      {{ range .Pages }}
+      {{ range sort .Pages }}
       <a href="{{.Params.github}}" target="_blank">
         {{- partial "category_card.html" . -}}
       </a>
