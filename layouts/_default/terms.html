@@ -14,34 +14,21 @@
     </div>
   </a>
 
-  {{ if or (eq .Title "Categories") (eq .Title "Projects") }}
+  {{ if eq .Title "Categories" }}
+  <div class="categories-container">
+    {{ range .Data.Terms }}
+    <a href="{{.Page.RelPermalink}}">
+      {{- partial "category_card.html" . -}}
+    </a>
+    {{ end }}
+  </div>
+
+  {{ else if eq .Title "Projects" }}
     <div class="categories-container">
-      {{ range .Data.Terms }}
-        <a href="{{.Page.RelPermalink}}">
-          <div class="card text-center" style="border-radius:.5rem">
-            <div class="card-header font-weight-bold">
-              {{.Page.Title}}
-            </div>
-            <div class="card-body">
-              <img src="{{ .Page.Params.image }}" alt="{{ .Page.Title }}" class="img-fluid mb-3"  style="border-radius:.5rem" >
-              <p class="card-text">
-                {{ .Page.Params.description }}
-              </p>
-            </div>
-            {{ if eq $.Title "Projects" }}
-            <div class="card-footer d-flex justify-content-around">
-              <a href="#" class="btn btn-link">
-                <img src="/favicon/favicon-16x16.png" alt="GitHub" class="icon">
-                Code
-              </a>
-              <a href="#" class="btn btn-link">
-                <img src="/favicon/favicon-16x16.png" alt="Web" class="icon">
-                Post
-              </a>
-            </div>
-            {{ end }}
-          </div>
-        </a>
+      {{ range .Pages }}
+      <a href="{{.Params.github}}" target="_blank">
+        {{- partial "category_card.html" . -}}
+      </a>
       {{ end }}
     </div>
 
