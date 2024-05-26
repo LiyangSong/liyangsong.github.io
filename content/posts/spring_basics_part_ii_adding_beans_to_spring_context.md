@@ -1,7 +1,7 @@
 ---
 title: "Spring Basics Part II: Adding Beans to Spring Context"
-date: 2024-05-23T16:29:45-04:00
-description: ""
+date: 2024-05-26T17:45:45-04:00
+description: "Adding Beans to the Spring context is the fundenmental and first step of learning Spring."
 tags: [Spring, Java, Backend, System Design]
 featured_image: "/img/spring.jpg"
 images: []
@@ -23,8 +23,6 @@ In a real-world app, not every object will be added to the Spring context, but o
 &nbsp;
 
 ## Add Beans to Spring Context
-
-&nbsp;
 
 #### Create a Spring context
 
