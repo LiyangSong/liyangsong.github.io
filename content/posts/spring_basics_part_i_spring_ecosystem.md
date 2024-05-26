@@ -58,7 +58,7 @@ Spring ecosystem also includes a big collection of projects, which can be used t
 
 &nbsp;
 
-#### Spring Applications in Real World**
+#### Spring Applications in Real World
 
 - Backend App: Backend applications execute on the server side and have the responsibility of managing data and serving client applications' requests. The client apps make requests to the backend app to work with users' data, and the backend might use the databases or communicate other backend apps.
 
