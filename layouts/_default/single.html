@@ -27,13 +27,13 @@
                     {{ end }}
                     <div class="post-meta">
                         {{ if .Params.date}}
-                        <time itemprop="datePublished">
+                        <time itemprop="datePublished" class="mr-2">
                             {{ i18n "format_date_tosec" .PublishDate }}
                         </time>
                         {{ end }}
 
                         {{ if .Params.categories }}
-                            <i class="material-icons ml-2" style="">folder</i>
+                            <i class="material-icons" style="">folder</i>
                                 <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
                                 &nbsp;
                         {{ end }}
