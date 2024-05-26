@@ -41,7 +41,7 @@ Spring is not just a framework but an ecosystem of frameworks, which includes se
 
 &nbsp;
 
-**Spring Core**
+#### Spring Core
 
 Spring works based on the principle of **_inversion of control (IoC)_**, which allows the Spring framework (dependencies) to control the app code and executions rather than the app's own code and dependencies. The term "control" means actions like creating instances or calling methods.
 
@@ -49,7 +49,7 @@ Within the IoC container (**_Spring Context_**), Spring controls instances added
 
 &nbsp;
 
-**Spring Projects**
+#### Spring Projects
 
 Spring ecosystem also includes a big collection of projects, which can be used together to develop an app. Such as:
 - **_Spring Boot_**: Offer a default configuration that follow known conventions and can be customized as needed.
@@ -58,7 +58,7 @@ Spring ecosystem also includes a big collection of projects, which can be used t
 
 &nbsp;
 
-**Spring Applications in Real World**
+#### Spring Applications in Real World**
 
 - Backend App: Backend applications execute on the server side and have the responsibility of managing data and serving client applications' requests. The client apps make requests to the backend app to work with users' data, and the backend might use the databases or communicate other backend apps.
 
