@@ -14,15 +14,3 @@
         </p>
     </div>
 </div>
-
-<!-- dynamically adjust the font size if the header overflows -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var headers = document.querySelectorAll('.card-header');
-        headers.forEach(function(header) {
-            if (header.scrollWidth > header.clientWidth) {
-                header.classList.add('long-header');
-            }
-        });
-    });
-</script>

@@ -236,13 +236,22 @@ var toggleDarkMode = function () {
     icon.innerText = "light_mode";
     icon2.innerText = "light_mode";
     setGiscusTheme("dark");
+    setHighlightStyle("{{ .Site.Params.darkHighlightStyle }}");
   } else {
     document.cookie = "night=0;path=/";
     document.body.classList.remove("night");
     icon.innerText = "dark_mode";
     icon2.innerText = "dark_mode";
     setGiscusTheme("light");
+    setHighlightStyle("{{ .Site.Params.lightHighlightStyle }}");
   }
+};
+
+let setHighlightStyle = function(theme) {
+  document.querySelectorAll('pre code').forEach(block => {
+    block.classList.remove('highlight');
+    block.classList.add(theme);
+  });
 };
 
 let night = document.cookie.replace(
@@ -312,4 +321,14 @@ var closeDrawer = function () {
 
 document.getElementById("drawer-mask").addEventListener("click", function () {
   closeDrawer();
+});
+
+<!-- dynamically adjust the font size if the header overflows -->
+document.addEventListener("DOMContentLoaded", function() {
+  var headers = document.querySelectorAll('.card-header');
+  headers.forEach(function(header) {
+    if (header.scrollWidth > header.clientWidth) {
+      header.classList.add('long-header');
+    }
+  });
 });
