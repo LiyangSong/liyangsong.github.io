@@ -8,6 +8,8 @@ $dark-mode-back-container-background: #212121;
 $dark-mode-front-container-background: #282828;
 
 body.night {
+  @import "../css/syntax-dark";
+
   background: $dark-mode-back-container-background;
   :root {
     --color_555: #ccc;
