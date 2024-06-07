@@ -55,17 +55,13 @@ def search(self, nums: List[int], target: int) -> int:
 
 &nbsp;
 
-## Topics
-
-&nbsp;
-
-#### Normal Type
+## Normal Type
 
 This type of problem may lack some conditions required for running a Binary Search, such as an accurate search range (upper or lower limit) or an accurate target. The key idea is to identify or build the necessary conditions to run a Binary Search.
 
 &nbsp;
 
-[704. Binary Search](https://leetcode.com/problems/binary-search/description/)
+#### [704. Binary Search](https://leetcode.com/problems/binary-search/description/)
 
 ```python
 class Solution:
@@ -91,7 +87,7 @@ class Solution:
 
 &nbsp;
 
-[702. Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/description/)
+#### [702. Search in a Sorted Array of Unknown Size](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/description/)
 
 An unknown size means an unknown upper limit of the search range. To find the accurate search range without affecting the total time complexity, we should do it in _O(logn)_ time.
 
@@ -128,7 +124,7 @@ class Solution:
 
 &nbsp;
 
-[74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+#### [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
 
 In a normal binary search, an element can be selected given an index of the array. For a 2D matrix (which should be ordered), the key is to give an index and extract the corresponding number from the matrix.
 
@@ -165,7 +161,7 @@ class Solution:
 
 &nbsp;
 
-[240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
+#### [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/description/)
 
 Unlike [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/), this matrix is not ordered. Binary search requires strict ordering in some range since, for each element, we need to identify which half should be discarded.
 
@@ -193,7 +189,7 @@ class Solution:
 
 &nbsp;
 
-#### OOXX Type
+## OOXX Type
 
 This type of question does not aim to find the element exactly the same as the target. It may demand us to find "the first [condition] number" or the "last not [condition] number" in a sorted array. It's like an array of "O" that becomes "X" from some point, and we want to find that point.
 
@@ -201,7 +197,7 @@ These questions are basically still Binary Search problems, but the validation m
 
 &nbsp;
 
-[34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+#### [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
 
 The problem can be split into two runs of Binary Search: one for the first position and one for the last position. The difference from a normal Binary Search is that when `nums[mid] == target`, it doesn't return directly but continues to search the left half (to find the first) or the right half (to find the last). Another difference is when validating the remaining two elements, the `end` should be checked first to find the last position as the remaining two elements could be the same.
 
@@ -249,7 +245,7 @@ class Solution:
 
 &nbsp;
 
-[35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)
+#### [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)
 
 The problem can be explained as "find the first number greater than the target" or "find the last number less than the target." The former is easier to manipulate as the answer is exactly the number's index.
 
@@ -280,7 +276,7 @@ class Solution:
 
 &nbsp;
 
-[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/description/)
+#### [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/description/)
 
 Peak elements mean the array has some increasing range (at least the one before the peak) and some decreasing range (at least the one after the peak). Binary Search can be applied with some-range ordered array. However, this problem has no target. The key is how to drop which half for a given element.
 
@@ -308,7 +304,7 @@ class Solution:
 
 &nbsp;
 
-[278. First Bad Version](https://leetcode.com/problems/first-bad-version/description/)
+#### [278. First Bad Version](https://leetcode.com/problems/first-bad-version/description/)
 
 A typical "OOXX" type problem. The purpose is to find the first element that doesn't meet a certain condition (`isBadVersion`) or the next one after the last element that meets a certain condition.
 
@@ -336,7 +332,7 @@ class Solution:
 
 &nbsp;
 
-[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
+#### [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
 
 The rotated array has two increasing ranges. The target is to find the minimum value, which should be found in the range below the rotated value. For a given element (`mid`), one half would be strictly increasing, and the other half will not, which contains our target.
 
@@ -361,7 +357,7 @@ class Solution:
 
 &nbsp;
 
-[33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+#### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 
 Similar to [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/). However, for a given element (`mid`), it is not easy to judge which half should be discarded by comparing it with the target. If the element is within the left increasing range (above the rotated value), then we should discard the left half if we want to move up. However, if we want to move down to smaller elements, they may exist among both left and right halves.
 
@@ -396,7 +392,7 @@ class Solution:
 
 &nbsp;
 
-#### Binary Answer type
+## Binary Answer type
 
 This type of question do not have a clear search range. The key is to identify:
 - The upper and lower limits
@@ -404,7 +400,7 @@ This type of question do not have a clear search range. The key is to identify:
 
 &nbsp;
 
-[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)
+#### [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)
 
 The square root of `x` cannot exceed `x`. So the upper limit is `x` and the lower limit is 0. For a given element (`mid`), we can compare `mid * mid` with `x` to judge which half we should go.
 
@@ -435,7 +431,7 @@ class Solution:
 
 &nbsp;
 
-[875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/)
+#### [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/description/)
 
 The lower limit is 1, as Koko needs to eat at least 1 banana each hour; otherwise, it cannot complete the task. The upper limit is `max(piles)`, as the total time would not change if Koko eats more than the `max(piles)` per hour: it has to wait for the hour to finish before moving to the next pile of bananas.
 
@@ -472,7 +468,7 @@ class Solution:
 
 &nbsp;
 
-[1060. Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/description/)
+#### [1060. Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/description/)
 
 The upper and lower limits are very clear, but it is not clear how to judge and drop one half for a given element (`mid`). For each element, the number of missing items before it can be calculated by `nums[i] - nums[0] - i`. Thus, we can compare this value with `k` and locate the position where the result should be found.
 
@@ -502,7 +498,7 @@ class Solution:
 
 &nbsp;
 
-[Amazon OA 2023 Dec.]()
+#### [Amazon OA 2023 Dec.]()
 
 > Amazon Warehouse delivers different items in different trucks having varied capacities.
 Given an array, trucks, of n integers that represents the capacities of different trucks, and an array items, of m integers that represent the weights of different items, for each item, find the index of the smallest truck which has a capacity greater than the item's weight. If there are multiple such trucks, choose the one with the minimum index.
@@ -545,7 +541,7 @@ class Solution:
 
 &nbsp;
 
-[Integer that Value Equals Index]()
+#### [Integer that Value Equals Index]()
 > For a strictly ordered integer array `nums`, find an index `i` making `nums[i] == i`. If such an index can't be found, return -1.
 > 
 > Example 1: nums = [-5 -2 1 3 5], output = 3
@@ -584,26 +580,33 @@ class Solution:
 
 ## Extra Problems
 
-&nbsp;
-
-[410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
+TODO
 
 &nbsp;
 
-[774. Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/)
+#### [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
 
 &nbsp;
 
-[475. Heaters](https://leetcode.com/problems/heaters/description/)
+#### [774. Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/)
 
 &nbsp;
 
-[1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/description/)
+#### [475. Heaters](https://leetcode.com/problems/heaters/description/)
 
 &nbsp;
 
-[981. Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/description/)
+#### [1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/description/)
 
 &nbsp;
 
-[1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
+#### [981. Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/description/)
+
+&nbsp;
+
+#### [1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
+
+&nbsp;
+
+## Summary
+
