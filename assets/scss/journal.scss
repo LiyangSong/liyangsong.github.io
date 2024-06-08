@@ -30,7 +30,7 @@ $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
 $tag-category-title-size: 22px;
-$toc-size: 16px;
+$toc-size: 14px;
 
 $dark-accent: darken($color-accent, 10%);
 $deep-dark-accent: darken($color-accent, 50%);
@@ -975,7 +975,7 @@ a {
   margin-right: 30px;
   margin-top: 30px;
   min-width: 200px;
-  max-width: 260px;
+  max-width: 280px;
   max-height: 80vh;
   overflow: auto;
   background: rgba($color-accent, 0.05);
