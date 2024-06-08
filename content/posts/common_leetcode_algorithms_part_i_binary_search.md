@@ -580,7 +580,7 @@ class Solution:
 
 &nbsp;
 
-#### [1011. Capacity To Ship Packages Within D Days] (https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/)
+#### [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/)
 
 ```python
 class Solution:
@@ -619,6 +619,8 @@ class Solution:
         return curr_days <= days
 ```
 
+&nbsp;
+
 #### [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
 
 ```python
@@ -656,6 +658,8 @@ class Solution:
             curr_count += 1
         return curr_count
 ```
+
+&nbsp;
 
 #### [774. Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/)
 
@@ -772,42 +776,46 @@ class Solution:
         return curr_count - 1  # k pieces means k-1 cuts
 ```
 
-## Extra Problems
-
-&nbsp;
-
-#### [259. 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/description/)
-
-```python
-class Solution:
-    def threeSumSmaller(self, nums: List[int], target: int) -> int:
-        if len(nums) < 3:
-            return 0
-        
-        nums.sort()
-        count = 0
-        for i, num in enumerate(nums):
-            start = i + 1
-            end = len(nums) - 1
-            while start < end:
-                if nums[start] + nums[end] < target - num:
-                    count += end - start
-                    start += 1
-                else:
-                    end -= 1 
-        
-        return count
-```
-
 &nbsp;
 
 #### [981. Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/description/)
 
-&nbsp;
-
-#### [1235. Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
+```python
+class TimeMap:
+    def __init__(self):
+        self.store = {}
+        
+    def set(self, key: string, value: string, timestamp: int) -> None:
+        if key not in self.store:
+            self.store[key] = []
+        self.store[key].append((timestamp, value))
+    
+    def get(self, key: string, timestamp: int) -> string:
+        if key not in self.store:
+            return ""
+        set_list = self.store[key]
+        start = 0
+        end = len(set_list) - 1
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if set_list[mid][0] <= timestamp:
+                start = mid
+            else:
+                end = mid
+        
+        if set_list[end][0] <= timestamp:
+            return set_list[end][1]
+        if set_list[start][0] <= timestamp:
+            return set_list[start][1]
+        return ""      
+```
 
 &nbsp;
 
 ## Summary
 
+Normal binary search questions typically involve identifying the shrinking direction by directly comparing the result variable with the target. Some questions may lack clear search limits or a specific target, in which case we should try to locate the result variable by comparing it with different intervals.
+
+OOXX type questions are a variant of binary search. The key difference is that in a normal binary search, the search stops and returns when the result variable equals the target. In contrast, OOXX type questions continue to search in such cases. These questions usually aim to "find the first element with [condition]" or "find the last element without [condition]."
+
+Binary answer type questions are the most challenging form of binary search. In these problems, the result variable cannot be directly compared with the target. Instead, methods or functions must be identified to transform the result variable into the target variable, where binary search can be applied. Additionally, the upper and lower limits are usually not clear in binary answer type questions. Splitting subarrays is a typical example of this type, where the upper and lower limits often refer to the smallest and largest possible splits.
