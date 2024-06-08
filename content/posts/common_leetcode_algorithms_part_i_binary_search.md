@@ -392,10 +392,13 @@ class Solution:
 
 &nbsp;
 
-## Binary Answer type
+## Binary Answer Type
 
-This type of question do not have a clear search range. The key is to identify:
+This type of question do not have a clear search range. And always the judging condition is not the required variable (search variable). 
+
+The key is to identify:
 - The upper and lower limits
+- The function to transform the search variable to the condition variable
 - The condition to judge and discard one half
 
 &nbsp;
@@ -575,28 +578,226 @@ class Solution:
         return -1        
 ```
 
-
 &nbsp;
 
-## Extra Problems
+#### [1011. Capacity To Ship Packages Within D Days] (https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/)
 
-TODO
+```python
+class Solution:
+    def shipWithinDays(self, weights: List[int], days: int) -> int:
+        start = max(weights)
+        end = sum(weights)
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if self.canShip(weights, days, mid):
+                end = mid
+            else:
+                start = mid
+        
+        if self.canShip(weights, days, start):
+            return start
+        else:
+            return end
+    
+    def canShip(self, weights: List[int], days: int, capacity: int) -> bool:
+        curr_weights = 0
+        curr_days = 0
 
-&nbsp;
+        for weight in weights:
+            if weight > capacity:
+                return False
+            
+            if weight <= capacity - curr_weights:
+                curr_weights += weight
+            else:
+                curr_days += 1
+                curr_weights = weight
+        
+        if curr_weights > 0:
+            curr_days += 1
+
+        return curr_days <= days
+```
 
 #### [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/)
 
-&nbsp;
+```python
+class Solution:
+    def splitArray(self, nums: List[int], k: int) -> int:
+        # upper and lower limits of max_sum
+        start = max(nums)  # each element as a subarray (k=n)
+        end = sum(nums)  # only one subarray (k=1)
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if self.countSubarrays(nums, mid) <= k:
+                end = mid
+            else:
+                start = mid
+
+        if self.countSubarrays(nums, start) <= k:
+            return start
+        else:
+            return end
+    
+    # This result is the least subarray count
+    # We can always split into more subarrays, e.g. each element as one subarray
+    def countSubarrays(self, nums: List[int], max_sum: int) -> int:
+        curr_count = 0
+        curr_sum = 0
+
+        for num in nums:
+            if curr_sum <= max_sum - num:
+                curr_sum += num
+            else:
+                curr_count += 1
+                curr_sum = num
+    
+        if curr_sum > 0:
+            curr_count += 1
+        return curr_count
+```
 
 #### [774. Minimize Max Distance to Gas Station](https://leetcode.com/problems/minimize-max-distance-to-gas-station/description/)
+
+```python
+class Solution:
+    def minmaxGasDist(self, stations: List[int], k: int) -> float:
+        distances = [y - x for x, y in zip(stations, stations[1:])]   
+        start = 1e-6  # k = inf
+        end = max(distances)  # k = 0
+        while start + 1e-6 < end:
+            mid = (start + end) / 2. # use / instead of // as mid can be float
+            if self.getMaxK(distances, mid) <= k:
+                end = mid
+            else:
+                start = mid
+        
+        if self.getMaxK(distances, start) >= k:
+            return start
+        else:
+            return end
+    
+    def getMaxK(self, distances: List[int], max_distance: float) -> int:
+        return sum([d // max_distance for d in distances])
+```
 
 &nbsp;
 
 #### [475. Heaters](https://leetcode.com/problems/heaters/description/)
 
+```python
+class Solution:
+    def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+        houses.sort()
+        heaters.sort()
+        
+        start = 0
+        end = max(houses[-1], heaters[-1]) - min(houses[0], heaters[0])
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if self.canCover(houses, heaters, mid):
+                end = mid
+            else:
+                start = mid
+        
+        if self.canCover(houses, heaters, start):
+            return start
+        else:
+            return end
+    
+    def canCover(self, houses: List[int], heaters: List[int], radius: int) -> bool:
+        i = 0
+        j = 0
+        while i < len(houses) and j < len(heaters):
+            if abs(houses[i] - heaters[j]) <= radius:
+                i += 1
+            else:
+                j += 1
+        
+        return i == len(houses)
+```
+
+```python
+class Solution:
+    def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+        heaters.sort()
+        return max([self.nearestHeaterDist(heaters, house) for house in houses])
+    
+    def nearestHeaterDist(self, heaters: List[int], house: int) -> int:
+        start = 0
+        end = len(heaters) - 1
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if heaters[mid] < house:
+                start = mid
+            elif heaters[mid] > house:
+                end = mid
+            else:
+                return 0
+
+        return min(abs(heaters[start] - house), abs(heaters[end] - house))
+```
+
 &nbsp;
 
 #### [1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/description/)
+
+```python
+class Solution:
+    def maximizeSweetness(self, sweetness: List[int], k: int) -> int:
+        start = min(sweetness)  # k = len(sweetness) at most
+        end = sum(sweetness)  # k = 1 at most
+        while start + 1 < end:
+            mid = (start + end) // 2
+            if self.getMaxK(sweetness, mid) < k:
+                end = mid
+            else:
+                start = mid
+   
+        if self.getMaxK(sweetness, end) >= k:
+            return end
+        else:
+            return start
+    
+    def getMaxK(self, sweetness: List[int], min_sweet: int) -> int:
+        curr_sweet = 0
+        curr_count = 0
+        for sweet in sweetness:
+            if curr_sweet + sweet >= min_sweet:
+                curr_count += 1
+                curr_sweet = 0
+            else:
+                curr_sweet += sweet
+        
+        return curr_count - 1  # k pieces means k-1 cuts
+```
+
+## Extra Problems
+
+&nbsp;
+
+#### [259. 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/description/)
+
+```python
+class Solution:
+    def threeSumSmaller(self, nums: List[int], target: int) -> int:
+        if len(nums) < 3:
+            return 0
+        
+        nums.sort()
+        count = 0
+        for i, num in enumerate(nums):
+            start = i + 1
+            end = len(nums) - 1
+            while start < end:
+                if nums[start] + nums[end] < target - num:
+                    count += end - start
+                    start += 1
+                else:
+                    end -= 1 
+        
+        return count
+```
 
 &nbsp;
 
