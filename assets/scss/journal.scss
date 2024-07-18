@@ -986,6 +986,7 @@ a {
   background: rgba($color-accent, 0.05);
   &,
   * {
+    color: $color-text;
     font-size: $toc-size;
   }
   ul {
@@ -998,7 +999,7 @@ a {
     padding: 20px;
   }
   .toc-active {
-    color: darken($color-accent, 40%) !important;
+    color: lighten($color-accent, 10%) !important;
   }
   @media screen and (max-width: $single-column-max-width) {
     line-height: 2em;
