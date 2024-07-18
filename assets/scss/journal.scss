@@ -1,15 +1,15 @@
 @import "../css/syntax-light";
+@import "../css/fonts";
 
 $color-accent: #1c3377;
-//$color-accent: #330000;
-$back-container-background: #f1f0ea;
+$back-container-background: #eae9e1;
 $front-container-background: #f5f4f0;
 $post-container-border: #6c757d;
 
-$default-font-list: Bookerly, Glow Sans TC, Glow Sans SC, Glow Sans J, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+$default-font-list: "Literata", "Glow Sans TC", "Glow Sans SC", "Glow Sans J", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$mono-font-list: JetBrains Mono, "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
+$mono-font-list: "JetBrains Mono", "Fira Mono", "Cousine", Monaco, Menlo, "Source Code Pro",
   monospace;
 //$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
 $sans-preferred-font-list: $default-font-list;
@@ -268,6 +268,10 @@ a {
       //align-items: stretch;
       flex: 1;
     }
+    .nav-background {
+      background: $back-container-background;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
     .nav-dropdown-toggle {
       display: flex;
       align-content: center;
@@ -318,7 +322,7 @@ a {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: white;
+      background: $back-container-background;
       -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -358,7 +362,7 @@ a {
     z-index: 1800;
     transition: all 0.3s ease-in-out;
     .drawer-content {
-      background: white;
+      background: $back-container-background;
       height: 100%;
       width: 100%;
       padding: 50px 0 80px 0;
@@ -780,6 +784,7 @@ a {
     padding: 15px;
   }
   .post {
+    background: $front-container-background;
     padding: 0 0 20px 0;
     .post-head-wrapper {
       margin-top: -20px;

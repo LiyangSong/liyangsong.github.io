@@ -1,7 +1,8 @@
 @import "journal";
 
-$light-accent: lighten($color-accent, 30%);
-$deep-light-accent: lighten($color-accent, 50%);
+$dark-theme-accent: #e3b051;
+$light-accent: lighten($dark-theme-accent, 10%);
+$deep-light-accent: lighten($dark-theme-accent, 30%);
 $dark-mode-text: darken(#fff, 10%);
 
 $dark-mode-back-container-background: #292521;
@@ -73,17 +74,17 @@ body.night {
       color: $dark-mode-text;
     }
     .nav-head {
-      //border-right: 4px solid $color-accent;
+      //border-right: 4px solid $dark-theme-accent;
       &:hover {
         border-right: 2px solid
-          rgba($color-accent, $nav-item-hover-indicator-alpha);
-        background: rgba($color-accent, $nav-item-hover-background-alpha);
-        color: lighten($color-accent, $nav-item-hover-color-darken);
+          rgba($dark-theme-accent, $nav-item-hover-indicator-alpha);
+        background: rgba($dark-theme-accent, $nav-item-hover-background-alpha);
+        color: lighten($dark-theme-accent, $nav-item-hover-color-darken);
       }
       &.active {
-        border-right: 2px solid $color-accent;
-        background: rgba($color-accent, $nav-item-active-background-alpha);
-        color: lighten($color-accent, $nav-item-active-color-darken);
+        border-right: 2px solid $dark-theme-accent;
+        background: rgba($dark-theme-accent, $nav-item-active-background-alpha);
+        color: lighten($dark-theme-accent, $nav-item-active-color-darken);
       }
     }
 
@@ -98,17 +99,17 @@ body.night {
         //border-right: 4px solid transparent;
         &:hover {
           border-right: 2px solid
-            rgba($color-accent, $nav-item-hover-indicator-alpha);
+            rgba($dark-theme-accent, $nav-item-hover-indicator-alpha);
           color: lighten(
-            $color-accent,
+            $dark-theme-accent,
             $nav-item-hover-color-lighten
           ) !important;
         }
         &.active {
-          border-right: 2px solid $color-accent;
-          background: rgba($color-accent, $nav-item-active-background-alpha);
+          border-right: 2px solid $dark-theme-accent;
+          background: rgba($dark-theme-accent, $nav-item-active-background-alpha);
           color: lighten(
-            $color-accent,
+            $dark-theme-accent,
             $nav-item-active-color-lighten
           ) !important;
         }
@@ -121,9 +122,6 @@ body.night {
     }
     .post {
       background: $dark-mode-front-container-background;
-      @media screen and (max-width: $single-column-max-width) {
-        background: $dark-mode-back-container-background;
-      }
       .post-pagination a:not([href]) {
         color: $dark-mode-text;
       }
@@ -133,9 +131,6 @@ body.night {
     }
     .post-list-container {
       background: $dark-mode-front-container-background;
-      @media screen and (max-width: $single-column-max-width) {
-        background: $dark-mode-back-container-background;
-      }
       &,
       > * {
         .post-item-wrapper {
@@ -145,13 +140,11 @@ body.night {
           .post-item-info-wrapper {
             @media screen and (max-width: $single-column-max-width) {
               box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-              background: $dark-mode-front-container-background;
             }
           }
 
           @media screen and (max-width: $single-column-max-width) {
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-            background: $dark-mode-front-container-background;
           }
           &:not(.post-item-wrapper-no-hover):hover {
             background: rgba(255, 255, 255, 0.03);
@@ -181,7 +174,7 @@ body.night {
         }
       }
       .nav-background {
-        background: $dark-mode-front-container-background;
+        background: $dark-mode-back-container-background;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
       }
     }
@@ -205,15 +198,15 @@ body.night {
   .single-column-drawer-container {
     @media screen and (max-width: $single-column-max-width) {
       .drawer-content {
-        background: $dark-mode-front-container-background;
+        background: $dark-mode-back-container-background;
         .toc {
-          background-color: lighten($dark-mode-front-container-background, 10%);
+          background-color: lighten($dark-mode-back-container-background, 10%);
         }
         .drawer-menu {
           .drawer-menu-item {
             color: $dark-mode-text;
             &.active {
-              border-right: 2px solid $color-accent;
+              border-right: 2px solid $dark-theme-accent;
               color: $light-accent;
             }
           }
