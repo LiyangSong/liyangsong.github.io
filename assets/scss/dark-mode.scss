@@ -1,11 +1,11 @@
 @import "journal";
 
-$light-accent: lighten($color-accent, 10%);
-$deep-light-accent: lighten($color-accent, 30%);
+$light-accent: lighten($color-accent, 30%);
+$deep-light-accent: lighten($color-accent, 50%);
 $dark-mode-text: darken(#fff, 10%);
 
-$dark-mode-back-container-background: #212121;
-$dark-mode-front-container-background: #282828;
+$dark-mode-back-container-background: #292521;
+$dark-mode-front-container-background: #3e3a37;
 
 body.night {
   @import "../css/syntax-dark";
