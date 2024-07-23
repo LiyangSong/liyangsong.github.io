@@ -10,6 +10,17 @@ comment: true
 draft: false
 ---
 
+## Common LeetCode Algorithms
+- I. Binary Search
+- [II. Binary Tree & Divide and Conquer](../common_leetcode_algorithms_part_ii_binary_tree_divide_and_conquer)
+- [III. BFS & Topological Sorting](../common_leetcode_algorithms_part_iii_bfs_topological_sorting)
+- [IV. DFS](../common_leetcode_algorithms_part_iv_dfs)
+- [V. Graph](../common_leetcode_algorithms_part_v_graph)
+- [VI. Two Pointer & Linked List](../common_leetcode_algorithms_part_vi_two_pointer_linkededlist)
+- [VII. Sliding Window & Sweep Line](../common_leetcode_algorithms_part_vii_sliding_window_sweep_line)
+- [VIII. Heap & Top K & Mono Stack](../common_leetcode_algorithms_part_viii_heap_top_k_mono_stack)
+- [IX. Prefix Sum & Stack & DP](../common_leetcode_algorithms_part_ix_prefix_sum_stack_dp)
+
 ## Introduction
 
 Binary Search is an efficient algorithm for finding an item in an ordered or partially ordered array with a logarithmic time complexity of _O(logn)_. It works by repeatedly dividing the search range in half, comparing the middle element to the target value, and discarding the half that does not include the target. This process is repeated until the target is found or the search range is exhausted. 
