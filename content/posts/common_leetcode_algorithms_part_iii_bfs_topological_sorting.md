@@ -1,7 +1,7 @@
 ---
 title: "Common LeetCode Algorithms Part III: BFS & Topological Sorting"
 date: 2024-07-22T20:52:47-04:00
-description: ""
+description: "BFS is one of the most commonly used algorithms in tech interviews, yet perhaps the most straightforward one."
 tags: [LeetCode, Algorithm, Python]
 featured_image: "/img/math.jpg"
 images: []
@@ -20,6 +20,8 @@ draft: false
 - [VII. Sliding Window & Sweep Line](../common_leetcode_algorithms_part_vii_sliding_window_sweep_line)
 - [VIII. Heap & Top K & Mono Stack](../common_leetcode_algorithms_part_viii_heap_top_k_mono_stack)
 - [IX. Prefix Sum & Stack & DP](../common_leetcode_algorithms_part_ix_prefix_sum_stack_dp)
+
+&nbsp;
 
 ## Introduction
 
@@ -636,6 +638,8 @@ class Solution:
         return False
 ```
 
+&nbsp;
+
 #### [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/description/)
 
 The neighbors of current node are the next 6 nodes, so it is better to transform the 2-D board into a 1-D list. Note to check the row number to determine whether to add the row from left to right or reverse.
@@ -1010,5 +1014,14 @@ class Solution:
 
 ## Summary
 
+BFS is one of the most commonly used algorithms in tech interviews. It can be applied to traverse a tree or graph to find a target value, count a metric, find the shortest path, or perform topological sorting. On the other hand, it is perhaps the most straightforward problem to solve, as its solution typically follows a fixed pattern:
+1. Initialize a queue and add the starting point (the root of a tree, one or several specific nodes of a graph, etc.).
+2. Pop a node from the queue, find its neighbors, and add valid neighbors to the queue.
+3. Repeat until the queue is empty.
 
+The key is to understand how the answer can be built across levels of the queue (e.g. maintain a global variable), how to check if neighbors are valid (not visited, not exceeding boundaries, etc.), and when to stop (e.g. upon finding the target or the queue becoming empty). 
+
+Using `for _ in range(len(queue))` is a useful trick to separate each level of BFS, and can be helpful when processing level-specific information.
+
+Dijkstra’s algorithm is essentially a modified form of BFS that uses a `heap` (priority queue) rather than a standard `queue`. Note python uses min-heap by default with `heapq.heappop` and `heapq.heappush` operations.
 
