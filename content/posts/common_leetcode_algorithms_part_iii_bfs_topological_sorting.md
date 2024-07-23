@@ -435,6 +435,10 @@ class Solution:
 
 #### [559. Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/)
 
+To start a BFS, add the root node to the queue. Track the level counts of the BFS to determine the depth. When the BFS completes, the recorded level counts will indicate the maximum depth.
+
+For each node, explore its children and add any non-null children to the queue.
+
 ```python
 class Solution:
     def maxDepth(self, root: 'Node') -> int:
@@ -470,7 +474,7 @@ The visited nodes can be recorded in two ways:
 
 For the shortest path in graph questions, the time complexity is _O(V + E)_ as we visit all nodes and edges (when checking all possible neighbors). The space complexity is _O(V)_ for the queue and visited set data structures.
 
-**Patter**:
+**Pattern**:
 
 ```python
 def bfs(self, grid, queue, visited):
