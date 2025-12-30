@@ -1,9 +1,9 @@
 @import "../css/syntax-light";
 @import "../css/fonts";
 
-$color-accent: #1c3377;
+$color-accent: #246155;
 $back-container-background: #eae9e1;
-$front-container-background: #f5f4f0;
+$front-container-background: #fafaf8;
 $post-container-border: #6c757d;
 
 $default-font-list: "Literata", "Glow Sans TC", "Glow Sans SC", "Glow Sans J", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -67,7 +67,7 @@ html {
 }
 
 body {
-  background: $back-container-background;
+  //background: $back-container-background;
   padding: 0;
   margin: 0;
   font-family: $default-font-list;
@@ -75,6 +75,15 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: $color-text;
+  background-image:
+          linear-gradient(
+                  rgba(245, 232, 210, 0.4),
+                  rgba(245, 232, 210, 0.4)
+          ),
+          url("/img/texture.png");
+  background-repeat: repeat;
+  background-size: 1200px auto;
+  background-attachment: fixed;
 }
 
 * {
@@ -437,19 +446,19 @@ a {
   width: $side-container-width;
   text-align: right;
   font-family: $sans-preferred-font-list;
-  padding: 20px 0 50px 0;
+  padding: 50px 0 50px 0;
   //overflow-x: hidden;
   //overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  $nav-item-hover-background-alpha: 0.02;
+  $nav-item-hover-background-alpha: 0.1;
   $nav-item-hover-indicator-alpha: 0.6;
   $nav-item-hover-color-darken: 30%;
-  $nav-item-active-background-alpha: 0.03;
+  $nav-item-active-background-alpha: 0.3;
   $nav-item-active-color-darken: 20%;
   .nav-head {
-    padding: 30px 28px 30px 20px;
+    padding: 30px 40px 30px 20px;
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
@@ -470,7 +479,7 @@ a {
       color: darken($color-accent, $nav-item-hover-color-darken);
     }
     &.active {
-      border-right: 2px solid $color-accent;
+      border-right: 3px solid $color-accent;
       background: rgba($color-accent, $nav-item-active-background-alpha);
       color: darken($color-accent, $nav-item-active-color-darken);
     }
@@ -481,7 +490,7 @@ a {
       font-size: $nav-link-size;
       margin-bottom: 10px;
       border-right: 2px solid transparent;
-      padding: 8px 28px 8px 30px;
+      padding: 8px 40px 8px 30px;
       cursor: hand;
       cursor: pointer;
       color: $deep-dark-accent;
@@ -498,18 +507,39 @@ a {
       &:hover {
         border-right: 2px solid
           rgba($color-accent, $nav-item-hover-indicator-alpha);
-        background: rgba($color-accent, $nav-item-hover-background-alpha);
+        background: linear-gradient(
+                        to left,
+                        rgba($color-accent, $nav-item-hover-background-alpha),
+                        rgba($color-accent, 0)
+        );
         color: darken($color-accent, $nav-item-hover-color-darken);
       }
       &.active {
         border-right: 2px solid $color-accent;
-        background: rgba($color-accent, $nav-item-active-background-alpha);
+        background: linear-gradient(
+                        to left,
+                        rgba($color-accent, $nav-item-active-background-alpha),
+                        rgba($color-accent, 0)
+        );
         color: darken($color-accent, $nav-item-active-color-darken);
       }
     }
   }
+  .nav-avatar {
+    padding: 10px 40px 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 150px;
+      height: 150px;
+      // border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba($color-accent, $nav-item-active-background-alpha);
+      //box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+    }
+  }
   .nav-footer {
-    padding: 20px 30px 0 20px;
+    padding: 20px 40px 0 20px;
     font-size: $nav-footer-size;
   }
   @media screen and (max-width: $single-column-max-width) {
@@ -978,7 +1008,7 @@ a {
   border-radius: 5px;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 30px;
+  margin-top: 80px;
   min-width: 200px;
   max-width: 280px;
   max-height: 80vh;

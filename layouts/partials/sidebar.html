@@ -40,7 +40,11 @@
         {{ end }}
     </div>
 
-    
+    {{ with .Site.Params.avatar }}
+    <div class="nav-avatar">
+        <img src="{{ . | absURL }}" alt="{{ $.Site.Title }} avatar" loading="lazy">
+    </div>
+    {{ end }}
 
     <div class="nav-footer">
         {{partial "copyright.html" .}}

@@ -1,8 +1,8 @@
 baseURL = "https://liyangsong.github.io/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "Liyang's Blog"
-copyright = "LiyangSong 2024"
+title = "Liyang Song"
+copyright = "LiyangSong 2026"
 # googleAnalytics = "UA-123-45"
 
 [markup]
@@ -20,6 +20,7 @@ tabWidth = 4
 [params]
 subtitle = "家園已在身後，世界儘在眼前"
 favicon = "/favicon/favicon.ico"
+avatar = "/img/avatar.png"
 enableGitalk = false
 enableGiscus = true
 
@@ -29,7 +30,7 @@ clarity = "abcdefghzd"
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
-title = "Liyang's Blog" # will set 'og:site_name'
+title = "Liyang Song" # will set 'og:site_name'
 description = "家園已在身後，世界儘在眼前"  # will set 'og:description'
 
 enableReadingTime = true
@@ -70,18 +71,14 @@ url = "/posts/about"
 name = "About 關於"
 weight = 1
 [[menu.main]]
-url = "/categories"
-name = "Categories 分類"
+url = "/posts/publications"
+name = "Publications 出版物"
 weight = 2
-[[menu.main]]
-url = "/posts"
-name = "Archive 歸檔"
-weight = 3
 [[menu.main]]
 url = "/projects"
 name = "Projects 項目"
-weight = 4
+weight = 3
 [[menu.main]]
-url = "/posts/links"
-name = "Links 友鏈"
-weight = 5
+url = "/posts"
+name = "Posts 博文"
+weight = 4
