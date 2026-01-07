@@ -31,24 +31,24 @@ Outside of work, I am an occasional INFJ, a long-time fan of strategy and RPG ga
 
 - 📧 Email: [song.liy@northeastern.edu](mailto:song.liy@northeastern.edu)
 - 😸 GitHub: [https://github.com/LiyangSong](https://github.com/LiyangSong)
-- 💼 LinkedIn: [https://www.linkedin.com/in/ly-song/](https://www.linkedin.com/in/ly-song)
-- 🏠 This site: [https://liyangsong.github.io/](https://liyangsong.github.io)
+- 💼 LinkedIn: [https://www.linkedin.com/in/ly-song](https://www.linkedin.com/in/ly-song)
+- 🏠 This site: [https://liyangsong.github.io](https://liyangsong.github.io)
 - 📄 CV (updated Dec 2025): [Liyang_Song_CV.pdf](/files/Liyang_Song_CV.pdf)
 
 &nbsp;
 
 ## Selected projects & publications
 
-- **Overcoming Small Data Limitations in Video-Based Infant Respiration Estimation**  
-  Benchmark and pipeline for estimating infant respiration from overnight home videos, including ROI detection, optical flow, spatiotemporal models, and PSD-based loss / post-processing.
+- **Overcoming Small Data Limitations in Video-Based Infant Respiration Estimation (WACV 2026)**  
+We introduce the AIR-400 benchmark and pipeline for estimating infant respiration from heterogeneous clinical RGB/IR videos, including infant ROI detection, multiple optical-flow methods, spatiotemporal models, and PSD-based loss / post-processing.
 
 - **DREAM-ASD Toolkit**  
-  Ongoing open-source toolkit for exploring skeleton, head pose, and gaze data from robot-enhanced autism therapy sessions. Provides preprocessing, visualization, and analysis utilities to support research on early ASD markers and engagement.
+Ongoing open-source toolkit for exploring skeleton, head pose, and gaze data from robot-enhanced autism therapy sessions. Provides preprocessing, visualization, and analysis utilities to support research on early ASD markers and engagement.
 
 - **Systems & backend projects**  
-  I have also built an online judge platform, a distributed key-value store, and several cloud-based ML pipelines using AWS, PostgreSQL, Docker, and message queues.
+I have also built PaxMesh, a transport-agnostic RPC framework with Paxos, CodeArena, a distributed online judge platform, a distributed key-value store, and several cloud-based ML pipelines using AWS, PostgreSQL, Docker, and message queues.
 
-*(More details and code will gradually appear on the Projects page.)*
+_More details and links are available on the [Projects](../../projects) page._
 
 &nbsp;
 
