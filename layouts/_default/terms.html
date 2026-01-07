@@ -24,11 +24,24 @@
   </div>
 
   {{ else if eq .Title "Projects" }}
-    <div class="categories-container">
-      {{ range sort .Pages }}
-      <a href="{{.Params.github}}" target="_blank">
-        {{- partial "category_card.html" . -}}
-      </a>
+    {{ $projects := .Pages.ByWeight }}
+    <div class="projects-list">
+      {{ range $index, $proj := $projects }}
+        {{ $href := or $proj.Params.github $proj.RelPermalink }}
+        <a class="a-block project-row" href="{{ $href }}" {{ if $proj.Params.github }}target="_blank" rel="noopener"{{ end }}>
+          <div class="project-thumb">
+            {{ with $proj.Params.image }}
+              <img src="{{ . | absURL }}" alt="{{ $proj.Title }} thumbnail" loading="lazy">
+            {{ end }}
+          </div>
+          <div class="project-info">
+            <div class="project-title">{{ $proj.Title }}</div>
+            <div class="project-description">{{ $proj.Params.description }}</div>
+          </div>
+        </a>
+        {{ if lt $index (sub (len $projects) 1) }}
+          <hr class="project-divider">
+        {{ end }}
       {{ end }}
     </div>
 
