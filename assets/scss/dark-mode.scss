@@ -273,6 +273,29 @@ body.night {
     }
   }
 
+  .projects-list {
+    .project-row {
+      color: $dark-mode-text;
+      .project-title {
+        color: $dark-mode-text;
+      }
+      .project-description {
+        color: rgba($dark-mode-text, 0.85);
+      }
+      .project-thumb {
+        background: rgba(255, 255, 255, 0.06);
+      }
+      &:hover {
+        .project-title {
+          color: $deep-light-accent;
+        }
+      }
+    }
+    .project-divider {
+      border-bottom: 1px solid rgba($dark-mode-text, 0.2);
+    }
+  }
+
   .categories-container {
     .card {
       * {
