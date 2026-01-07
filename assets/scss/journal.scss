@@ -14,8 +14,8 @@ $mono-font-list: "JetBrains Mono", "Fira Mono", "Cousine", Monaco, Menlo, "Sourc
 //$sans-preferred-font-list: "Montserrat", "Roboto", "Source Sans Pro", "Helvetica", $default-font-list;
 $sans-preferred-font-list: $default-font-list;
 
-$side-container-width: 22%; //280px;
-$extra-container-width: 24%;
+$side-container-width: 22%; // match extra column for balance
+$extra-container-width: 22%;
 $extra-container-pagination-width: 75px;
 $stream-container-max-width: 1620px;
 
