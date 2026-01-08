@@ -33,7 +33,7 @@ Outside of work, I am an occasional INFJ, a long-time fan of strategy and RPG ga
 - 😸 GitHub: [https://github.com/LiyangSong](https://github.com/LiyangSong)
 - 💼 LinkedIn: [https://www.linkedin.com/in/ly-song](https://www.linkedin.com/in/ly-song)
 - 🏠 This site: [https://liyangsong.github.io](https://liyangsong.github.io)
-- 📄 CV / Resume (updated Jan 2026): [Resume_Liyang_Song_012026.pdf](/files/Resume_Liyang_Song_012026.pdf)
+- 📄 CV / Resume (updated Jan 2026): [resume_liyang_song_012026.pdf](/files/resume_liyang_song_012026.pdf)
 
 &nbsp;
 

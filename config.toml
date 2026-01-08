@@ -83,6 +83,6 @@ url = "/posts"
 name = "Posts 博文"
 weight = 4
 [[menu.main]]
-url = "/files/Resume_Liyang_Song_012026.pdf"
+url = "/files/resume_liyang_song_012026.pdf"
 name = "CV / Resume 履歷"
 weight = 5
