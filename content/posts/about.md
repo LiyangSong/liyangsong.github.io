@@ -16,12 +16,21 @@ draft: false
 Hi, my name is **Liyang Song**.
 
 I am a deep learning researcher at the [Institute for Experiential AI](https://ai.northeastern.edu/) at Northeastern University in
-[Portland, Maine](https://www.visitportland.com/), working on computer vision and AI for healthcare.  
+[Portland, Maine](https://www.visitportland.com/), working on computer vision and AI for healthcare. I completed my M.S. in Data Science at Northeastern University and previously worked as a data engineer and software developer in industry. I like building systems that connect carefully-designed vision models with real-world clinical data.
+
+While working as a data engineer at a pharmaceutical company in China. I visited some of the country’s poorest villages, where “barefoot doctors” without medical degrees cared for thousands of patients in small clinics. We helped set up remote video consultations so specialists in Shanghai could review difficult cases. I still remember patients lining up in cramped rooms while a remote oncologist quietly pointed out a tiny shadow on a scan that turned out to be an early cancer. 
+
+Those days were inspiring but also unsettling: every extra consultation meant another late night. That tension is why I care about AI systems that make high-quality care more scalable and reliable, instead of just adding another dashboard for doctors to babysit.
+
+My research lies at the intersection of robust computer vision, multimodal learning, and healthcare. I am especially interested in:
+- **Robust computer vision under domain shift** – understanding how models fail when the distribution changes, and designing methods that transfer across patients, devices, and environments.
+- **Grounded multimodal and long-form / egocentric video understanding** – connecting visual signals with language, context, and temporal structure in real-world videos.
+- **Reliable and trustworthy ML** – uncertainty, evaluation, and failure analysis for models that will be used in high-stakes settings.
+- **AI for healthcare & computational medicine** – including video-based physiological monitoring and infant development, where data are small, noisy, and clinically constrained.
+
+In the long term, I hope to help build computer vision systems that clinicians can trust for remote monitoring and triage, so that high-quality care is accessible even where specialists are scarce.
 
 Recently, I led a project on video-based infant respiration estimation that resulted in a first-author paper at [WACV 2026](https://github.com/michaelwwan/air-400), and I now work on tools to analyze children’s pose and gaze in autism therapy sessions as part of the [DREAM project](https://github.com/LiyangSong/DREAM-ASD-Toolkit).
-
-Before that, I completed my M.S. in Data Science at Northeastern University and worked as a data engineer and software developer in industry. I like
-building systems that connect carefully-designed vision models with real-world clinical data.
 
 Outside of work, I am an occasional INFJ, a long-time fan of strategy and RPG games, and an amateur photographer.
 
