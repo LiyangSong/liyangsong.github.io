@@ -18,7 +18,7 @@ Hi, my name is **Liyang Song**.
 I am a deep learning researcher at the [Institute for Experiential AI](https://ai.northeastern.edu/) at Northeastern University in
 [Portland, Maine](https://www.visitportland.com/), working on computer vision and AI for healthcare. I completed my M.S. in Data Science at Northeastern University and previously worked as a data engineer and software developer in industry. I like building systems that connect carefully-designed vision models with real-world clinical data.
 
-While working as a data engineer at a pharmaceutical company in China. I visited some of the country’s poorest villages, where “barefoot doctors” without medical degrees cared for thousands of patients in small clinics. We helped set up remote video consultations so specialists in Shanghai could review difficult cases. I still remember patients lining up in cramped rooms while a remote oncologist quietly pointed out a tiny shadow on a scan that turned out to be an early cancer. 
+While working as a data engineer at a pharmaceutical company in China, I visited some of the country’s poorest villages, where “barefoot doctors” without medical degrees cared for thousands of patients in small clinics. We helped set up remote video consultations so specialists in Shanghai could review difficult cases. I still remember patients lining up in cramped rooms while a remote oncologist quietly pointed out a tiny shadow on a scan that turned out to be an early cancer. 
 
 Those days were inspiring but also unsettling: every extra consultation meant another late night. That tension is why I care about AI systems that make high-quality care more scalable and reliable, instead of just adding another dashboard for doctors to babysit.
 
